@@ -1,6 +1,6 @@
-# raspimouse_game_controller
+# raspicat_gamepad_controller
 
-Package for operating Raspberry Pi Mouse with some kinds of game controllers.
+Package for operating Raspberry Pi Cat with some kinds of game controllers.
 
 This package supports the following controllers:
 
@@ -16,7 +16,7 @@ This package requires the following to run:
 * ROS
   * Kinetic Kame
 * ROS Package
-  * Raspberry Pi Mouse Controller - [ryuichiueda/raspimouse\_ros\_2](https://github.com/ryuichiueda/raspimouse_ros_2)
+  * Raspberry Pi Cat Controller - [rt-net/raspicat\_ros](https://github.com/rt-net/raspicat_ros)
 
 # Installation
 
