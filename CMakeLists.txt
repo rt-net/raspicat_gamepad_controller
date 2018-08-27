@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(raspimouse_game_controller)
+project(raspicat_gamepad_controller)
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
