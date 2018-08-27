@@ -25,8 +25,8 @@ class JoyTwist(object):
 
         twist = Twist()
         if joy_msg.buttons[0] == 1:
-            twist.linear.x = joy_msg.axes[1] * 0.2 * self.level
-            twist.angular.z = joy_msg.axes[0] * 3.14 / 32 * (self.level + 15)
+            twist.linear.x = joy_msg.axes[1] * 0.6 * self.level
+            twist.angular.z = joy_msg.axes[0] * 3.14 / 16 * (self.level + 15)
         else:
             twist.linear.x = 0
             twist.angular.z = 0
