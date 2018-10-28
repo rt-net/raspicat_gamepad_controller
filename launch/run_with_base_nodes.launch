@@ -1,8 +1,9 @@
 <?xml version="1.0"?>
 <launch>
-  <!-- raspimouse_ros_2 -->
-  <include file="$(find raspimouse_ros_2)/launch/raspimouse.launch" />
-  <!--  <node pkg="raspimouse_ros_2" name="motors" type="motors.py" required="true" /> -->
+  <!-- raspicat_ros -->
+  <include file="$(find raspicat_ros)/launch/raspicat.launch">
+    <arg name="imu" value="true" />
+  </include>
 
   <!-- joy_node -->
   <arg name="dev" default="/dev/input/js0" />
@@ -11,6 +12,6 @@
     <param name="dev" type="string" value="$(arg dev)" />
   </node>
 
-  <node pkg="raspimouse_game_controller" name="logicool_cmd_vel"
+  <node pkg="raspicat_gamepad_controller" name="logicool_cmd_vel"
     type="logicool_cmd_vel.py" required="true" output="screen" />
 </launch>
