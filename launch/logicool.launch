@@ -6,6 +6,6 @@
     <param name="dev" type="string" value="$(arg dev)" />
   </node>
 
-  <node pkg="raspimouse_game_controller" name="logicool_cmd_vel"
+  <node pkg="raspicat_gamepad_controller" name="logicool_cmd_vel"
     type="logicool_cmd_vel.py" required="true" output="screen" />
 </launch>
