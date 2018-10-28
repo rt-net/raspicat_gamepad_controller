@@ -10,6 +10,7 @@ class JoyTwist(object):
     def __init__(self):
         self._joy_sub = rospy.Subscriber('/joy', Joy, self.joy_callback, queue_size=1)
         self._twist_pub = rospy.Publisher('/cmd_vel', Twist, queue_size=1)
+        self._smooth_twist_pub = rospy.Publisher('/raw_cmd_vel', Twist, queue_size=1)
 
         self.level = 1
 
@@ -27,10 +28,15 @@ class JoyTwist(object):
         if joy_msg.buttons[0] == 1:
             twist.linear.x = joy_msg.axes[1] * 0.6 * self.level
             twist.angular.z = joy_msg.axes[0] * 3.14 / 16 * (self.level + 15)
+            self._twist_pub.publish(twist)
+        elif joy_msg.buttons[2] == 1:
+            twist.linear.x = joy_msg.axes[1] * 0.6 * self.level
+            twist.angular.z = joy_msg.axes[0] * 3.14 / 16 * (self.level + 15)
+            self._smooth_twist_pub.publish(twist)
         else:
             twist.linear.x = 0
             twist.angular.z = 0
-        self._twist_pub.publish(twist)
+            self._twist_pub.publish(twist)
 
         if joy_msg.axes[1] == joy_msg.axes[0] == 0:
             self.level -= 1

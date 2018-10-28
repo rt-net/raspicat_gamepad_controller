@@ -10,4 +10,6 @@
     <arg name="dev" default="/dev/input/js0" />
   </include>
 
+  <include file="$(find raspicat_gamepad_controller)/launch/smooth.launch" />
+
 </launch>

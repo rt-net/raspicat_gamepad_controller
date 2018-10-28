@@ -7,5 +7,8 @@
   </node>
 
   <node pkg="raspicat_gamepad_controller" name="logicool_cmd_vel"
-    type="logicool_cmd_vel.py" required="true" output="screen" />
+    type="logicool_cmd_vel.py" required="true" output="screen">
+    <!-- <remap from="/cmd_vel" to="/raw_cmd_vel" /> -->
+  </node>
+
 </launch>
