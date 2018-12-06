@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <launch>
   <!-- raspicat_ros -->
-  <include file="$(find raspicat_ros)/launch/raspicat.launch">
+  <include file="$(find raspicat)/launch/raspicat.launch">
     <arg name="imu" value="true" />
   </include>
 
