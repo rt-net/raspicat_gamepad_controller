@@ -1,6 +1,7 @@
 # raspicat_gamepad_controller
 
-Raspberry Pi Catを家庭用ゲームコントローラ (Logicool Wireless Gamepad F710) を用いて操作するためのパッケージです。
+Raspberry Pi Catを家庭用ゲームコントローラ (Logicool Wireless Gamepad F710) を用いて操作するためのパッケージです。  
+本パッケージは[zaki0929/raspimouse_game_controller](https://github.com/zaki0929/raspimouse_game_controller)をベースに開発されています。
 
 # 動作環境
 
