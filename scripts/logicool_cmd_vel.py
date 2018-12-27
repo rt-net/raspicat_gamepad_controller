@@ -15,23 +15,27 @@ class JoyTwist(object):
         self.level = 1
 
     def limitter(self, lvl):
-        if lvl <= 0:    return 1
-        if lvl >= 6:    return 5
+        if lvl <= 0:
+            return 1
+        if lvl >= 6:
+            return 5
         return lvl
 
     def joy_callback(self, joy_msg):
-        if joy_msg.buttons[7] == 1: self.level += 1
-        if joy_msg.buttons[6] == 1: self.level -= 1
+        if joy_msg.buttons[7] == 1:
+            self.level += 1
+        if joy_msg.buttons[6] == 1:
+            self.level -= 1
         self.level = self.limitter(self.level)
 
         twist = Twist()
         if joy_msg.buttons[0] == 1:
-            twist.linear.x = joy_msg.axes[1] * 0.6 * self.level
-            twist.angular.z = joy_msg.axes[0] * 3.14 / 16 * (self.level + 15)
+            twist.linear.x = joy_msg.axes[1] * 0.4 * self.level
+            twist.angular.z = joy_msg.axes[0] * 3.14 / 32 * (self.level + 15)
             self._twist_pub.publish(twist)
         elif joy_msg.buttons[2] == 1:
-            twist.linear.x = joy_msg.axes[1] * 0.6 * self.level
-            twist.angular.z = joy_msg.axes[0] * 3.14 / 16 * (self.level + 15)
+            twist.linear.x = joy_msg.axes[1] * 0.4 * self.level
+            twist.angular.z = joy_msg.axes[0] * 3.14 / 32 * (self.level + 15)
             self._smooth_twist_pub.publish(twist)
         else:
             twist.linear.x = 0
