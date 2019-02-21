@@ -1,8 +1,10 @@
 <?xml version="1.0"?>
 <launch>
+  <arg name="imu" default="false" />
+
   <!-- raspicat_ros -->
   <include file="$(find raspicat)/launch/raspicat.launch">
-    <arg name="imu" value="true" />
+    <arg name="imu" value="$(arg imu)" />
   </include>
 
   <!-- joy_node -->
