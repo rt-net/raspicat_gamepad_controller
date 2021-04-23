@@ -14,7 +14,6 @@ class JoyTwist(object):
         
         self.smooth_flag = False
         self.level = 1
-    
     def limitter(self, lvl):
         if lvl <= 0:
             return 1
