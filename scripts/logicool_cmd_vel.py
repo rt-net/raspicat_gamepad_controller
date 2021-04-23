@@ -34,7 +34,7 @@ class JoyTwist(object):
             # uncomment the following two lines to use speed up function
             #twist.linear.x = joy_msg.axes[1] * 0.4 * self.level
             #twist.angular.z = joy_msg.axes[0] * 3.14 / 32 * (self.level + 15)
-            # uncomment the following two lines to use speed up function
+            # comment out the following two lines to use speed up function
             twist.linear.x = joy_msg.axes[1] * 0.4
             twist.angular.z = joy_msg.axes[0] * 3.14 / 32 * 15
             self._twist_pub.publish(twist)
