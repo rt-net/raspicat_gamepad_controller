@@ -8,11 +8,11 @@ Raspberry Pi Catを家庭用ゲームコントローラ (Logicool Wireless Gamep
 以下の環境にて動作確認を行っています。
 
 * Raspberry Pi
-  * Raspberry Pi 3 model B
+  * Raspberry Pi 4 model B
 * Ubuntu
-  * Ubuntu 16.04
+  * Ubuntu 18.04
 * ROS
-  * Kinetic Kame
+  * ROS Melodic Morenia
 * ROS Package
   * Raspberry Pi Cat Controller - [rt-net/raspicat_ros](https://github.com/rt-net/raspicat_ros)
   * yocs_velocity_smoother - [yujinrobot/yujin_ocs](https://github.com/yujinrobot/yujin_ocs)
