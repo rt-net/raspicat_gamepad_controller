@@ -1,5 +1,8 @@
 # raspicat_gamepad_controller
 
+__本ROSパッケージは[rt-net/raspicat_ros](https://github.com/rt-net/raspicat_ros)へ移行しました。__  
+[rt-net/raspicat_ros](https://github.com/rt-net/raspicat_ros)にてメンテナンスは継続されますが、本リポジトリはメンテナンスされません。
+
 Raspberry Pi Catを家庭用ゲームコントローラ (Logicool Wireless Gamepad F710) を用いて操作するためのパッケージです。  
 本パッケージは[zaki0929/raspimouse_game_controller](https://github.com/zaki0929/raspimouse_game_controller)をベースに開発されています。
 
